@@ -1,0 +1,22 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<!--Poppins  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<!-- backgroung image -->
+<a href="https://www.vectorstock.com/royalty-free-vector/abstract-blue-background-with-triangles-vector-21801903"></a>
+
+<br>
+<body class="body">
+<div class="container">
+  <h1 class="header">Welcome to Employee Management System</h1>
+  <br>
+    <nav class="topnav-centered">
+      <a routerLink="/employees" routerLinkActive="active" >View Employees</a> &nbsp;&nbsp;
+      <a routerLink="/employees/add" routerLinkActive="active">Add New Employee</a> &nbsp;&nbsp;
+      <!-- <a routerLink="/employees/:id" routerLinkActive="active">Get Employee detail</a> -->
+    </nav> 
+  <router-outlet></router-outlet>
+</div>
+</body>

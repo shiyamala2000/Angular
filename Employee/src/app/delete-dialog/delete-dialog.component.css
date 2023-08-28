@@ -1,0 +1,46 @@
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-family:  'Poppins', sans-serif;
+}
+
+.content {
+  color: #292828;
+  font-family:  'Poppins', sans-serif;
+}
+
+.delete-container {
+  display: flex;
+  justify-content: center;
+  /* gap: 16px; */
+}
+.delete-button,
+.cancel-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family:  'Poppins', sans-serif;
+
+}
+.delete-button:hover{
+  background-color: #1357a0;
+}
+.cancel-button:hover {
+  background-color: #c4c3bf;
+}
+.delete-button{
+  color: white; 
+  background-color: #007bff; 
+}
+.cancel-button{
+  margin-right: 8px;
+  color: black;
+  margin-right: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}

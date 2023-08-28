@@ -1,0 +1,15 @@
+<!--Poppins  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<div class="container">
+<h2 mat-dialog-title class="title">Confirm Delete</h2>
+<mat-dialog-content class="content">
+  Are you sure you want to delete the employee?
+</mat-dialog-content>
+<mat-dialog-actions class="delete-container">
+  <button mat-button class="mat-button mat-warn delete-button" color="warn" (click)="onConfirm()">Delete</button>&nbsp;&nbsp;
+  <button mat-button class="cancel-button" (click)="onCancel()">Cancel</button>
+</mat-dialog-actions>
+</div>

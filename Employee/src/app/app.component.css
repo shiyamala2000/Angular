@@ -1,0 +1,64 @@
+.container {
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+}
+
+header h1 {
+  margin: 0;
+  padding-top: 50px;
+}
+
+.topnav-centered {
+  float: none;
+  position: relative;
+  top: 90%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+.row {
+  padding-top: 170px;
+}
+
+.icon {
+  position: relative;
+  padding-left: 30px;
+}
+
+/* .body{
+  background-image: url('/assets/vectorstock_21801903.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+} */

@@ -1,0 +1,74 @@
+.container {
+  max-width: 400px;
+  margin: 1 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-weight: 590;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ----radio button--- */
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Remove default radio button styling */
+.form-group input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.form-group input[type="radio"]:checked {
+  background-color: #007bff;
+  border-color: #f0f1f3;
+}
+
+.form-group input[type="radio"]:focus {
+  outline: none;
+}

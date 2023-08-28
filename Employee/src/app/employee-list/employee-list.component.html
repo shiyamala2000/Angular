@@ -1,0 +1,49 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<!--Poppins  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<hr style="border-top: 2px solid rgb(85, 82, 82);">
+<h2 class="header">Employee List</h2>
+<div class="container">
+    <div class="row">
+
+        <div class="table-responsive" id="sailorTableArea">
+            <table id="sailorTable" class="table table-striped table-bordered" width="100%">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employees"><!--employee=variable name-->
+                        <td>{{ employee.id }}</td>
+                        <td>{{ employee.name }}</td>
+                        <td>{{ employee.designation }}</td>
+                        <td>{{employee.gender}}</td>
+                        <td>{{employee.email}}</td>
+                        <td>{{ employee.phoneNo }}</td>
+                        <td>
+                            <a [routerLink]="['/employees/update', employee.id]">
+                                <i class="fa fa-pencil-square icon" aria-hidden="true"></i>
+                            </a> |
+                            <a (click)="onDeleteConfirm(employee.id)">
+                                <i class="fa fa-trash icon1" aria-hidden="true"></i>
+                            </a>
+                            <!-- <a [routerLink]="['/employees/delete', employee.id]">
+                                <i class="fa fa-trash icon1" aria-hidden="true"></i>
+                            </a> -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

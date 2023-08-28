@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body{
+    background-image: url('assets/vectorstock_21801903.jpg'); /* Adjust path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+}

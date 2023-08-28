@@ -1,0 +1,62 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<!--Poppins  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<div class="container">
+  <h2 class="header">Add Employee</h2>
+
+  <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="employee.name" required>
+      <div class="text-danger" *ngIf="employeeForm.controls['name'].invalid && employeeForm.controls['name'].touched">
+        Name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="designation">Designation:</label>
+      <select class="form-control" id="designation" name="designation" [(ngModel)]="employee.designation" required>
+        <!-- <option disabled>Select designation</option>
+        <option *ngFor="let web of availableDesignations">{{web}}</option> -->
+        <option value="Manager">Manager</option>
+        <option value="Developer">Developer</option>
+        <option value="Designer">Designer</option>
+        <option value="Tester">Tester</option>
+      </select>
+      <!-- <input type="text" class="form-control" id="designation" name="designation" [(ngModel)]="employee.designation" required> -->
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <div class="radio-group">
+        <label>
+          <input type="radio" class="form-control" id="male" name="gender" value="Male" [(ngModel)]="employee.gender"
+            required> Male &nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" class="form-control" id="female" name="gender" value="Female"
+            [(ngModel)]="employee.gender" required>Female
+        </label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" id="email" name="email" [(ngModel)]="employee.email" 
+      required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
+      <div *ngIf="employeeForm.controls['email']?.invalid && employeeForm.controls['email']?.touched" class="alert alert-danger">
+        Please enter a valid email address.
+    </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNo">Phone Number:</label>
+      <input type="text" class="form-control" id="phoneNo" name="phoneNo" [(ngModel)]="employee.phoneNo" required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">Add Employee</button>
+  </form>
+</div>
